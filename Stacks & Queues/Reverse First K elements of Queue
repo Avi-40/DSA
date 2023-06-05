@@ -20,3 +20,28 @@ queue<int> modifyQueue(queue<int> q, int k) {
     }
     return q;
 }
+
+/*withput stack using recursion
+void solve(queue<int> &q, int k,int i) {
+   if(i==k+1){
+       return;
+    }
+    int j=i;
+    int v=q.front();
+    q.pop();
+    solve(q,k,j+1);
+    q.push(v);
+   
+}
+
+// Function to reverse first k elements of a queue.
+queue<int> modifyQueue(queue<int> q, int k) {
+    solve(q,k,1);
+    int i=q.size()-k;
+    while(i--){
+        int v=q.front();
+        q.pop();
+        q.push(v);
+    }
+    return q;
+}*/
