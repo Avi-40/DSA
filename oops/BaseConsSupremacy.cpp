@@ -21,6 +21,8 @@ class derived:public base{
 
     public:
     //base class default cons will always gets priority 
+    //and if we dont specify a cons, then derived class will use
+    //default cons from base class.
     derived(){
         cout<<"derived class default cons"<<endl;
     }

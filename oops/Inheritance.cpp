@@ -1,44 +1,54 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
-class Rectangle{
-    protected:
-    int len;
-    int breadth;
-
-    public:
-    Rectangle(int x=0, int y=0){
-        len=x;
-        breadth=y;
+class A
+{
+public:
+    int a;
+    int b;
+    void fun()
+    {
+        cout << " Class A" << endl;
     }
-
-    void area(){
-        cout<<len*breadth<<endl;
+};
+class D
+{
+public:
+    bool i;
+    void fun()
+    {
+        cout << " Class D" << endl;
+    }
+};
+class B : public A
+{
+public:
+    string l;
+    void fun2()
+    {
+        cout << " Class B" << endl;
+    }
+};
+class C : public A, public D
+{
+public:
+    char k;
+    void fun3()
+    {
+        cout << " Class C" << endl;
     }
 };
 
-class Cuboid:public Rectangle{
-    protected:
-    int height;
-
-    public:
-    Cuboid(int x=0, int y=0, int z=0){
-        len=x;
-        breadth=y;
-        height=z;
-    }
-
-    void vol(){
-        cout<<len*breadth*height<<endl;
-    }
-};
-
-int main(){
-    Rectangle paper(30,40);
-    paper.area();
-    Cuboid box(40,50,50);
-    box.vol();
-    return 0;
+int main()
+{
+    A obj1;
+    B obj2;
+    C obj3;
+    D obj4;
+    cout << obj1.a << endl;
+    cout << obj2.a << endl;
+    cout << obj3.i << endl;
+    cout << obj4.i << endl;
+    // obj1.fun1();
+    obj3.D::fun();
 }

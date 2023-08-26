@@ -13,11 +13,11 @@ class A{
     }
     void operator++(){
         ++weight;
-         cout<<"here1";
+         cout<<"here1"<<endl;
     }
     void operator++(int){
         weight++;
-        cout<<"here";
+        cout<<"here2"<<endl;
     }
 
     void PrintWeight(){

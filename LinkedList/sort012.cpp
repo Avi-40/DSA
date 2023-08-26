@@ -1,4 +1,5 @@
-/********************************
+#include<bits/stdc++.h>
+using namespace std;
     class Node
     {
     public:
@@ -11,7 +12,6 @@
         }
     };
 
-********************************/
 void insert(Node* &tail,Node* curr){
     tail->next=curr;
     tail=curr;
